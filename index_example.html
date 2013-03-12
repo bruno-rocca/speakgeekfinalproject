@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<!--
+    This is an HTML page that contains a CSS and a Javascript file.
+    
+    Run this sample by clicking the 'Preview' button on top;
+    a new tab will open with the current page open.
+-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Hello world from Cloud9!</title>
+        <link rel="stylesheet" href="main.css" type="text/css"/>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+                
+    </head>
+
+    
+    
+    <body>
+    <p>Hi, my name is Bob.</p>
+    <button id="imageViewer">Check me out!</button>
+  <img id="pic" style="display:none;"  src="http://bit.ly/10xLmix"></img>
+	<p>If you like what you see, leave me your number and I'll get in touch.</p>
+
+    <input type="text" id="phone"></input>
+
+    <button id="sendsms" disabled="disabled">Send me SMS!</button>
+    <button id="partycall" disabled="disabled">Join my party line!</button>
+
+    <script type="text/javascript">
+    	$(document).on("ready",function(){
+            //Click handler example
+            $("#imageViewer").on("click",function(){
+               $("#pic").fadeToggle();
+            });
+            
+            $("#phone").change(function(){
+                if ($("#phone").val().length == 10) {
+                    $("#sendsms").removeAttr("disabled");
+                    $("#partycall").removeAttr("disabled");
+                    
+                } else {
+                    
+                    alert("Dude.. 10 digit US numbers only!");
+                    $("#sendsms").attr("disabled", "disabled");
+                    $("#partycall").attr("disabled", "disabled");                
+                    
+                }
+                    
+            });
+            
+            $("#sendsms").on("click",function(){
+                phoneNumber = $("#phone").val();
+                message = "Hey There";
+                sendSMS(phoneNumber, message);
+            });            
+            
+            
+            $("#partycall").on("click",function(){
+                phoneNumber1 = "6505399630";
+                phoneNumber2 = $("#phone").val();
+                conferenceMeIn(phoneNumber1, phoneNumber2);
+            });             
+        });
+    </script>
+        
+        <!-- load scripts at the bottom of your page -->
+        <script src="main.js"></script>
+    </body>
+</html>
