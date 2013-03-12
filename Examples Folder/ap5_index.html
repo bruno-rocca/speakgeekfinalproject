@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<!--    
+    Run this sample by clicking the 'Preview' button on top;
+    a new tab will open with the current page open.
+-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>SpeakGeek Final Project</title>
+        <link rel="stylesheet" href="example.css" type="text/css"/>
+        <script src="js/jquery-1.9.1.js"></script>              
+    </head>
+    
+    <body>
+    <h1>Welcome to my online dating site, we're still building up our community, so far there's only me!</h1>
+    <button id="imageViewer">Check me out!</button>
+  <img id="pic" style="display:none;"  src="http://bit.ly/10xLmix"></img>
+	<p>If you like what you see, leave me your number and I'll get in touch.</p>
+
+    <input type="text" id="phone"></input>
+
+    <button id="sendsms" disabled="disabled">SMS</button> 
+    <button id="partycall" disabled="disabled">Conference Call</button>
+
+    <script type="text/javascript">
+        $(document).on("ready",function(){
+            $("#imageViewer").on("click", function(){
+                $("#pic").fadeToggle();
+            });
+        });
+
+        $("#phone").change(function(){
+            if ($("#phone").val().length == 10){
+                $("#sendsms").removeAttr("disabled");
+                $("#partycall").removeAttr("disabled");
+           
+            }   else {
+
+                alert("Dude.. 10 digit US numbers only!");
+            }
+        });
+
+        $("#sendsms").on("click",function(){
+            phoneNumber = $("#phone").val();
+            message = "Hey There";
+            sendSMS(phoneNumber, message);
+        });
+
+    </script>
+
+        
+        <!-- load scripts at the bottom of your page -->
+    </body>
+</html>
