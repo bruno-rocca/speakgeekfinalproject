@@ -1,0 +1,2 @@
+{"ts":1362861308142,"silentsave":true,"restoring":false,"patch":[[{"diffs":[[1,"// Place all the styles related to the home controller here.\n// They will automatically be included in application.css.\n// You can use Sass (SCSS) here: http://sass-lang.com/\n"]],"start1":0,"start2":0,"length1":0,"length2":175}]],"length":175}
+{"contributors":[],"silentsave":false,"ts":1362861350013,"patch":[[{"diffs":[[0,"ng.com/\n"],[1,"\nbody {background-color:#b0c4de;}"]],"start1":167,"start2":167,"length1":8,"length2":41}]],"length":208,"saved":false}
