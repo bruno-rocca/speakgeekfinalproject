@@ -28,25 +28,25 @@
             $("#imageViewer").on("click", function(){
                 $("#pic").fadeToggle();
             });
-        });
+        
 
-        $("#phone").change(function(){
-            if ($("#phone").val().length == 10){
-                $("#sendsms").removeAttr("disabled");
-                $("#partycall").removeAttr("disabled");
-           
-            }   else {
-
-                alert("Dude.. 10 digit US numbers only!");
-            }
-        });
-
-        $("#sendsms").on("click",function(){
-            phoneNumber = $("#phone").val();
-            message = "Hey There";
-            sendSMS(phoneNumber, message);
-        });
-
+	        $("#phone").change(function(){
+	            if ($("#phone").val().length == 10){
+	                $("#sendsms").removeAttr("disabled");
+	                $("#partycall").removeAttr("disabled");
+	           
+	            }   else {
+	
+	                alert("Dude.. 10 digit US numbers only!");
+	            }
+	        });
+	
+	        $("#sendsms").on("click",function(){
+	            phoneNumber = $("#phone").val();
+	            message = "Hey There";
+	            sendSMS(phoneNumber, message);
+        	});
+    	});
     </script>
 
         
