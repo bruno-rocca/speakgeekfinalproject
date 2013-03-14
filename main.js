@@ -42,7 +42,7 @@ function conferenceMeIn(phoneNumber1, phoneNumber2) {
       dataType: 'json',
       data: { "To" : "+1" + phoneNumber1,
               "Message": "You've got someone who wants to talk to you!",
-              "RoomName": "Party Line"
+              "RoomName": "Speak Geek Conference Center"
       },
       success: function (results) {
         console.log(results);
@@ -59,8 +59,8 @@ function conferenceMeIn(phoneNumber1, phoneNumber2) {
       url: "/conference.php",
       dataType: 'json',
       data: { "To" : "+1" + phoneNumber2,
-              "Message": "Welcome to the Party Line! Please hold while we connect the other folks..",
-              "RoomName": "Party Line"
+              "Message": "Welcome to the Speak Geek Conference Center! Please hold while we connect the other folks..",
+              "RoomName": "Speak Geek Conference Center"
       },
       success: function (results) {
         console.log(results);
